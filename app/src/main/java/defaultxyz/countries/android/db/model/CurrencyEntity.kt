@@ -8,7 +8,7 @@ import androidx.room.PrimaryKey
 data class CurrencyEntity(
     @PrimaryKey(autoGenerate = true) val id: Long? = null,
     val name: String,
-    val code: String,
-    val symbol: String,
-    @ColumnInfo(name = "country_id") val countryId: Long
+    val code: String? = null,
+    val symbol: String? = null,
+    @ColumnInfo(name = "country_id") val countryId: Long? = null
 )

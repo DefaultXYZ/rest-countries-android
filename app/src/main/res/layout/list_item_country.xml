@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <data>
+
+        <variable
+            name="item"
+            type="defaultxyz.countries.android.presentation.countries.CountryItem"
+            />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:id="@+id/countryName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{ item.name }"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Poland"
+            />
+
+        <TextView
+            android:id="@+id/domainList"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{ item.domain }"
+            app:layout_constraintEnd_toEndOf="@id/countryName"
+            app:layout_constraintStart_toStartOf="@id/countryName"
+            app:layout_constraintTop_toBottomOf="@id/countryName"
+            tools:text=".pl"
+            />
+
+        <TextView
+            android:id="@+id/phoneCodeList"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{ item.phoneCode }"
+            app:layout_constraintEnd_toEndOf="@id/countryName"
+            app:layout_constraintStart_toStartOf="@id/countryName"
+            app:layout_constraintTop_toBottomOf="@id/domainList"
+            tools:text="48"
+            />
+
+        <TextView
+            android:id="@+id/currencyList"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{ item.currency }"
+            app:layout_constraintEnd_toEndOf="@id/countryName"
+            app:layout_constraintStart_toStartOf="@id/countryName"
+            app:layout_constraintTop_toBottomOf="@id/phoneCodeList"
+            tools:text="PLN"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

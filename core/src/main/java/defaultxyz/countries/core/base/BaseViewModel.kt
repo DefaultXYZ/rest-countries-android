@@ -38,7 +38,7 @@ abstract class BaseViewModel : ViewModel() {
     RxJava support
      */
 
-    protected fun <T : Any> Observable<T>.subscribe(
+    protected fun <T : Any> Observable<T>.subscribeOnValue(
         onError: (Throwable) -> Unit = {},
         onNext: (T) -> Unit
     ) {
@@ -49,7 +49,7 @@ abstract class BaseViewModel : ViewModel() {
         }).addToDisposables()
     }
 
-    protected fun <T : Any> Flowable<T>.subscribe(
+    protected fun <T : Any> Flowable<T>.subscribeOnValue(
         onError: (Throwable) -> Unit = {},
         onNext: (T) -> Unit
     ) {
@@ -60,7 +60,7 @@ abstract class BaseViewModel : ViewModel() {
         }).addToDisposables()
     }
 
-    protected fun <T : Any> Single<T>.subscribe(
+    protected fun <T : Any> Single<T>.subscribeOnValue(
         onError: (Throwable) -> Unit = {},
         onSuccess: (T) -> Unit
     ) {
@@ -71,7 +71,7 @@ abstract class BaseViewModel : ViewModel() {
         }).addToDisposables()
     }
 
-    protected fun <T : Any> Maybe<T>.subscribe(
+    protected fun <T : Any> Maybe<T>.subscribeOnValue(
         onError: (Throwable) -> Unit = {},
         onSuccess: (T) -> Unit
     ) {
@@ -82,7 +82,7 @@ abstract class BaseViewModel : ViewModel() {
         }).addToDisposables()
     }
 
-    protected fun Completable.subscribe(
+    protected fun Completable.subscribeOnValue(
         onError: (Throwable) -> Unit = {},
         onComplete: () -> Unit
     ) {

@@ -6,6 +6,6 @@ import retrofit2.http.GET
 
 interface ApiClient {
 
-    @GET("/all?fields=name;topLevelDomain;callingCodes;currencies")
+    @GET("all?fields=name;topLevelDomain;callingCodes;currencies")
     fun getCountries(): Single<List<CountryResponse>>
 }

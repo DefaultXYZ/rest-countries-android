@@ -10,7 +10,7 @@ import io.reactivex.Single
 interface CountryDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertCountries(vararg countries: CountryEntity): Completable
+    fun insertCountries(vararg countries: CountryEntity): Single<List<Long>>
 
     @Query("SELECT * FROM country")
     fun getAll(): Single<List<CountryEntity>>
