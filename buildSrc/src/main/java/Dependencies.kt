@@ -54,11 +54,14 @@ object Versions {
 
     const val leakCanary = "2.0-beta-3"
 
-    const val junit = "4.12"
+    const val junit = "1.0.0"
+    const val truth = "1.0.0"
     const val testCore = "1.2.0"
     const val mockitoKotlin = "2.1.0"
 
     const val testRunner = "1.2.0"
+    const val testRules = "1.2.0"
+    const val robolectric = "4.3"
     const val espresso = "3.2.0"
 }
 
@@ -106,12 +109,16 @@ object Libraries {
 
     const val leakCanary = "com.squareup.leakcanary:leakcanary-android:${Versions.leakCanary}"
 
-    const val junit = "junit:junit:${Versions.junit}"
+    const val junit = "androidx.test.ext:junit:${Versions.junit}"
+    const val truth = "androidx.test.ext:truth:${Versions.truth}"
     const val testCore = "androidx.test:core:${Versions.testCore}"
     const val lifecycleTesting = "androidx.arch.core:core-testing:${Versions.lifecycle}"
     const val roomTest = "androidx.room:room-testing:${Versions.room}"
     const val mockitoKotlin = "com.nhaarman.mockitokotlin2:mockito-kotlin:${Versions.mockitoKotlin}"
 
     const val testRunner = "androidx.test:runner:${Versions.testRunner}"
+    const val testRules = "androidx.test:rules:${Versions.testRules}"
+
+    const val robolectric ="org.robolectric:robolectric:${Versions.robolectric}"
     const val espresso = "androidx.test.espresso:espresso-core:${Versions.espresso}"
 }

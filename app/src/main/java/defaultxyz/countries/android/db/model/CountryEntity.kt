@@ -4,7 +4,7 @@ import androidx.room.*
 import java.util.*
 
 @Entity(tableName = "country")
-class CountryEntity(
+data class CountryEntity(
     @PrimaryKey(autoGenerate = true) val id: Long? = null,
     val name: String,
     @ColumnInfo(name = "domain_list") val domainList: List<String>,

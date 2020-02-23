@@ -56,14 +56,6 @@ dependencies {
     implementation Libraries.roomRxJava
     kapt Libraries.roomCompiler
 
-    implementation Libraries.firebaseCore
-    implementation Libraries.firebaseAuth
-
-    implementation Libraries.facebookLogin
-    implementation Libraries.googleAuth
-
-    implementation Libraries.crashlytics
-
     implementation Libraries.retrofit
     implementation Libraries.retrofitGson
     implementation Libraries.retrofitRxJava
@@ -72,22 +64,22 @@ dependencies {
     implementation Libraries.rxkotlin
     implementation Libraries.rxandroid
 
-    implementation Libraries.dexter
-
     implementation Libraries.daggerAndroid
     implementation Libraries.daggerAndroidSupport
     kapt Libraries.daggerCompiler
     kapt Libraries.daggerAndroidProcessor
 
-    debugImplementation Libraries.leakCanary
-
     kaptTest Libraries.daggerCompilerTest
 
     testImplementation Libraries.junit
+    testImplementation Libraries.truth
+    testImplementation Libraries.testRunner
+    testImplementation Libraries.testRules
     testImplementation Libraries.testCore
     testImplementation Libraries.lifecycleTesting
     testImplementation Libraries.roomTest
     testImplementation Libraries.mockitoKotlin
+    testImplementation Libraries.robolectric
 
     androidTestImplementation Libraries.testRunner
     androidTestImplementation Libraries.espresso

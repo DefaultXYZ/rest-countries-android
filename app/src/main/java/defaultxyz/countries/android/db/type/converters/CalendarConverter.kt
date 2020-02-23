@@ -9,7 +9,7 @@ object CalendarConverter {
     @TypeConverter
     fun fromLong(timestamp: Long): Calendar =
         Calendar.getInstance().apply {
-            timeInMillis = timeInMillis
+            timeInMillis = timestamp
         }
 
     @JvmStatic
