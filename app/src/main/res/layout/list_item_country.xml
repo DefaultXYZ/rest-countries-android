@@ -15,6 +15,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_small"
         >
 
         <TextView
@@ -22,17 +23,22 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@{ item.name }"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="Poland"
             />
 
+        <!-- TODO Titles should be added, not provided by designer :) -->
+
         <TextView
             android:id="@+id/domainList"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@{ item.domain }"
+            android:textColor="@android:color/black"
             app:layout_constraintEnd_toEndOf="@id/countryName"
             app:layout_constraintStart_toStartOf="@id/countryName"
             app:layout_constraintTop_toBottomOf="@id/countryName"
@@ -44,6 +50,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@{ item.phoneCode }"
+            android:textColor="@android:color/black"
             app:layout_constraintEnd_toEndOf="@id/countryName"
             app:layout_constraintStart_toStartOf="@id/countryName"
             app:layout_constraintTop_toBottomOf="@id/domainList"
@@ -55,6 +62,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@{ item.currency }"
+            android:textColor="@android:color/black"
             app:layout_constraintEnd_toEndOf="@id/countryName"
             app:layout_constraintStart_toStartOf="@id/countryName"
             app:layout_constraintTop_toBottomOf="@id/phoneCodeList"
