@@ -69,6 +69,7 @@ dependencies {
     implementation Libraries.retrofitRxJava
 
     implementation Libraries.rxjava
+    implementation Libraries.rxkotlin
     implementation Libraries.rxandroid
 
     implementation Libraries.dexter

@@ -14,7 +14,8 @@ import javax.inject.Singleton
         AppModule::class,
         ActivityBinder::class,
         FragmentBinder::class,
-        ViewModelBinder::class
+        ViewModelBinder::class,
+        RepositoryBinder::class
     ]
 )
 interface AppComponent {
